@@ -42,7 +42,7 @@ def pregunta_02():
     n_iterations = 1000
 
     # Defina el parámetro inicial `params` como un arreglo de tamaño 3 con ceros
-    params = np.zeros(y.shape[1]).reshape(1,3)
+    params = np.array([x_poly.shape[0,0,0]])
     for epoch in range(n_iterations):
 
         # Compute el pronóstico con los parámetros actuales
