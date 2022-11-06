@@ -6,6 +6,8 @@ En este laboratio se estimarán los parámetros óptimos de un modelo de regresi
 polinomial de grado `n`.
 
 """
+
+
 def pregunta_01():
     """
     Complete el código presentado a continuación.
@@ -40,7 +42,7 @@ def pregunta_02():
     n_iterations = 1000
 
     # Defina el parámetro inicial `params` como un arreglo de tamaño 3 con ceros
-    params = np.array(y.shape[0,0,0])
+    params = np.zeros(y.shape[1]).reshape(1,3)
     for epoch in range(n_iterations):
 
         # Compute el pronóstico con los parámetros actuales
