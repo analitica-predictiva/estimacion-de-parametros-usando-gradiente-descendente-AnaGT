@@ -52,7 +52,7 @@ def pregunta_02():
         error = [y - y_pred for y, y_pred in zip(y, y_pred)]
 
         # Calcule el gradiente
-        gradient = -2 * error
+        gradient = -2 * sum(error)
 
         # Actualice los parámetros
         params = params - learning_rate * gradient
