@@ -49,7 +49,7 @@ def pregunta_02():
         y_pred = np.dot(x_poly, learning_rate)
 
         # Calcule el error
-        error = y - y_pred
+        error = [y - y_pred for y, y_pred in zip(y, y_pred)]
 
         # Calcule el gradiente
         gradient = -2 * error
