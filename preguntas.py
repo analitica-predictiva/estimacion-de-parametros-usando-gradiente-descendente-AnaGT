@@ -42,7 +42,7 @@ def pregunta_02():
     n_iterations = 1000
 
     # Defina el parámetro inicial `params` como un arreglo de tamaño 3 con ceros
-    params = np.zeros(x_poly.shape[1,3])
+    params = np.zeros(3)
     for epoch in range(n_iterations):
 
         # Compute el pronóstico con los parámetros actuales
@@ -52,7 +52,7 @@ def pregunta_02():
         error = y - y_pred
 
         # Calcule el gradiente
-        gradient = -2 * error
+        gradient = np.dot(x_poly.T,error)
 
         # Actualice los parámetros
         params = params - learning_rate * gradient
